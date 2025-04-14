@@ -43,9 +43,6 @@ net.to('cuda')
 
 num_epochs = 10
 class MyLoss:
-    def __init__(self):
-        pass
-
     def __call__(self, y, y_hat):
         y_exp = y.exp()
         partition = y_exp.sum(dim=1, keepdim=True)
